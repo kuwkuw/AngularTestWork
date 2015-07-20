@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Test Work</title>
+	<script type="text/javascript"	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+	<script src="https://code.angularjs.org/1.4.3/angular-resource.js"></script>
+	<script type="text/javascript"	src="app/app.js"></script>
+	<script type="text/javascript" src="app/appController.js"></script>
+	<script type="text/javascript" src="app/appDirective.js"></script>
+	<script type="text/javascript" src="app/getHttpFactory.js"></script>
+	<script type="text/javascript" src="app/getResourcFactory.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<div class="container" ng-controller="AppController as appCntr">
+		<div class="lilst-holder" ng-cloack>
+			<div class="list-item" ng-repeat="item in appCntr.list">
+				<img class="icon" img-click={{item.url}} ng-src={{item.thumbnailUrl}} alt="">
+				<div class="title">Title: {{item.title}}</div>
+			</div>
+		</div>
+	</div>
+<!-- 	<div class="big-img" style="background-color: rgba(0, 0, 0, 0.498039);">
+		<div class="img-wrp">
+			<img src="http://placehold.it/600/92c952">
+		</div>
+	</div>	 -->
+</body>
+</html>
