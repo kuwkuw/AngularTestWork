@@ -2,7 +2,9 @@
 	'use strict';
 
 	angular.module('app')
-		.directive('imgClick', function(){
+		.directive('imgClick', imgClickDirective);
+
+		function imgClickDirective(){
 			return {
 				restrict: 'A',
 				link: function(scope, element, attrs){
@@ -30,5 +32,5 @@
 					});
 				}
 			}
-		});
+		}
 })();
